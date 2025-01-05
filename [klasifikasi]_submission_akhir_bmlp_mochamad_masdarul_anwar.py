@@ -109,22 +109,11 @@ for name, model in models.items():
 Berikut adalah hasil evaluasi dan perbandingan dua algoritma yang digunakan, yaitu **Decision Tree** dan **Random Forest**:
 
 ### 1. **Decision Tree**
-- **Accuracy**: 0.9744
-- **Precision**: 0.9739
-- **Recall**: 0.9744
-- **F1-score**: 0.9740
-- **Confusion Matrix**:
-  ```
-  [[289   0   0   0   5   0   0   0   0]
-   [  0  75   0   0   0   0   0   0   0]
-   [  0   0 139   0   0   0   0   0   0]
-   [  0   0   0 158   0   0   3   0   0]
-   [  5   0   0   0  54   6   0   0   0]
-   [  3   0   0   0   0 309   0   0   0]
-   [  0   0   0   1   0   0 175   1   0]
-   [  0   1   2   6   0   0   0  43   2]
-   [  0   0   0   0   0   0   0   5 280]]
-  ```
+- Accuracy: 0.9757
+- Precision: 0.9753
+- Recall: 0.9757
+- F1-score: 0.9753
+
 
 **Kelebihan Decision Tree**:
 - Mudah diinterpretasi.
@@ -137,22 +126,11 @@ Berikut adalah hasil evaluasi dan perbandingan dua algoritma yang digunakan, yai
 ---
 
 ### 2. **Random Forest**
-- **Accuracy**: 0.9853
-- **Precision**: 0.9854
-- **Recall**: 0.9853
-- **F1-score**: 0.9850
-- **Confusion Matrix**:
-  ```
-  [[294   0   0   0   0   0   0   0   0]
-   [  0  75   0   0   0   0   0   0   0]
-   [  0   0 139   0   0   0   0   0   0]
-   [  0   0   0 159   0   0   2   0   0]
-   [  6   0   0   0  56   3   0   0   0]
-   [  3   0   0   0   0 309   0   0   0]
-   [  0   0   0   0   0   0 177   0   0]
-   [  0   0   0   4   0   0   1  47   2]
-   [  0   0   0   0   0   0   0   2 283]]
-  ```
+- Accuracy: 0.9853
+- Precision: 0.9853
+- Recall: 0.9853
+- F1-score: 0.9851
+
 
 **Kelebihan Random Forest**:
 - Lebih akurat dibanding Decision Tree karena menggunakan teknik ensemble.
@@ -164,11 +142,6 @@ Berikut adalah hasil evaluasi dan perbandingan dua algoritma yang digunakan, yai
 
 ---
 
-### 3. **Perbandingan Kinerja**
-| Metode          | Accuracy | Precision | Recall | F1-Score |
-|------------------|----------|-----------|--------|----------|
-| **Decision Tree** | 0.9744   | 0.9739    | 0.9744 | 0.9740   |
-| **Random Forest** | 0.9853   | 0.9854    | 0.9853 | 0.9850   |
 
 Dari hasil evaluasi, **Random Forest** memberikan performa yang lebih baik dibandingkan dengan **Decision Tree** pada semua metrik evaluasi. Hal ini menunjukkan bahwa Random Forest lebih andal dalam menangani dataset dengan kompleksitas lebih tinggi dan mampu mengurangi risiko overfitting.
 
@@ -195,29 +168,20 @@ Berdasarkan hasil evaluasi yang telah dilakukan, kita dapat menganalisis metrik 
 
 #### **Precision, Recall, dan F1-Score**
 - **Decision Tree**:
-  - **Precision**: 0.9739
-  - **Recall**: 0.9744
-  - **F1-Score**: 0.9740
+  - Accuracy: 0.9757
+  - Precision: 0.9753
+  - Recall: 0.9757
+  - F1-score: 0.9753
 - **Random Forest**:
-  - **Precision**: 0.9854
-  - **Recall**: 0.9853
-  - **F1-Score**: 0.9850
+  - Accuracy: 0.9853
+  - Precision: 0.9853
+  - Recall: 0.9853
+  - F1-score: 0.9851
 
 Semua metrik menunjukkan performa yang sangat baik untuk kedua model. Nilai precision, recall, dan F1-score yang tinggi mengindikasikan bahwa kedua model bekerja dengan baik dalam mengklasifikasikan data. Namun, perlu diperhatikan bahwa **Random Forest** sedikit lebih unggul dibandingkan dengan **Decision Tree**.
 
-#### **Confusion Matrix**
-Confusion Matrix untuk kedua model:
-```
-[[289   0   0   0   5   0   0   0   0]
- [  0  75   0   0   0   0   0   0   0]
- [  0   0 139   0   0   0   0   0   0]
- [  0   0   0 158   0   0   3   0   0]
- [  5   0   0   0  54   6   0   0   0]
- [  3   0   0   0   0 309   0   0   0]
- [  0   0   0   1   0   0 175   1   0]
- [  0   1   2   6   0   0   0  43   2]
- [  0   0   0   0   0   0   0   5 280]]
-```
+
+
 
 - **Temuan**:
   - Secara umum, kedua model menunjukkan performa yang baik, dengan hanya sedikit kesalahan di beberapa kelas. Misalnya, **kelas 5** dan **kelas 8** memiliki beberapa **False Positives** dan **False Negatives** yang menunjukkan adanya kesalahan klasifikasi pada kelas-kelas tersebut.
